@@ -24,7 +24,9 @@
         {
             $player = $event->getPlayer();
             $name = $player->getName();
-            $this->plugin->money->set($name, 0);
+            if(!$this->plugin->exists($name)){//ここにyurisiが追加しました
+            	$this->plugin->money->set($name, 0);
+	    }
         }
 
         public function onDataPacketReceive(DataPacketReceiveEvent $event)
