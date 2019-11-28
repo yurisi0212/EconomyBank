@@ -24,7 +24,7 @@
         {
             $player = $event->getPlayer();
             $name = $player->getName();
-            if(!$this->plugin->exists($name)){//ここにyurisiが追加しました
+            if(!$this->plugin->money->exists($name)){//ここにyurisiが追加しました
             	$this->plugin->money->set($name, 0);
 	    }
         }
